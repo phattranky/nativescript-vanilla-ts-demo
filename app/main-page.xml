@@ -4,7 +4,7 @@ of which NativeScript renders with a platform-specific iOS or Android native con
 You can find a full list of user interface components you can use in your app at
 https://docs.nativescript.org/ui/components.
 -->
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page" xmlns:Card="nativescript-cardview">
     <!--
     The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
     http://docs.nativescript.org/ui/action-bar
@@ -28,5 +28,12 @@ https://docs.nativescript.org/ui/components.
         <Label text="Tap the button" class="h1 text-center"/>
         <Button text="TAP" tap="{{ onTap }}" class="btn btn-primary btn-active"/>
         <Label text="{{ message }}" class="h2 text-center" textWrap="true"/>
+
+        <Card:CardView backgroundColor="#fff" elevation="40" radius="5">
+           <GridLayout rows="200, auto, auto" columns="auto, auto, *" padding="20">
+               <Image src="~/images/minion.jpg" stretch="aspectFill" colSpan="3" row="0" />
+               <Label text="Phat Test" class="info" textWrap="true" row="1" colSpan="3" />          
+           </GridLayout>
+       </Card:CardView>
     </StackLayout>
 </Page>
